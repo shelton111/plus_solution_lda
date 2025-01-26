@@ -1,0 +1,82 @@
+:root {
+    --primary-color: #2575fc;
+    --secondary-color: #6a11cb;
+    --accent-color: #ff6b6b;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+.hero-section {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.pinimg.com/736x/3c/81/fc/3c81fcef9e8a998f5998abb7521e3633.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    padding: 150px 0;
+}
+.hero-content {
+    animation: fadeIn 1s ease-out;
+}
+.service-card {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #333;
+    transition: all 0.4s ease;
+    transform: translateY(0);
+}
+.service-card:hover {
+    transform: translateY(-15px);
+    background-color: #2a2a2a;
+    border-color: var(--primary-color);
+}
+.service-icon {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    animation: pulse 2s infinite;
+}
+.why-choose-section {
+    background-color: #1a1a1a;
+}
+.why-choose-card {
+    background-color: #2a2a2a;
+    border: none;
+    transition: transform 0.3s ease;
+}
+.why-choose-card:hover {
+    transform: scale(1.05);
+}
+.footer-contact {
+    background-color: #0a0a0a;
+}
+.about-section {
+    background-color: #1a1a1a;
+}
+.team-member {
+    transition: transform 0.3s ease;
+}
+.team-member:hover {
+    transform: scale(1.05);
+}
+.client-logo {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+.client-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
