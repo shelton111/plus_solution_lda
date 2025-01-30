@@ -1,5 +1,6 @@
 .modal-content {
-    background-color: var(--dark-card);
+    background-color:transparent;
+    background-image: url('https://i.pinimg.com/736x/3c/81/fc/3c81fcef9e8a998f5998abb7521e3633.jpg');
     color: #e0e0e0;
     border: 1px solid #333;
 }
@@ -8,8 +9,7 @@
 }
 
 .form-container {
-    background: linear-gradient(#212121, #212121) padding-box,
-      linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+    background: transparent;
       border: 2px solid transparent;
       padding: 32px 24px;
       font-size: 14px;
@@ -40,7 +40,7 @@
     .form-container .form-group label {
       display: block;
       margin-bottom: 5px;
-      color: #717171;
+      color: white;
       font-weight: 600;
       font-size: 12px;
     }
@@ -96,7 +96,7 @@
       justify-content: center;
       align-self: flex-start;
       font-family: inherit;
-      color: #717171;
+      color: white;
       font-weight: 600;
       width: 40%;
       background: #313131;

@@ -1,228 +1,340 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Plus Solutions - Soluções Tecnológicas Avançadas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <link rel="icon" href="icon/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="icon/apple-touch-icon.png">
+
+    <title>Auto Mecânica</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
     <link href="css/modal.css" rel="stylesheet">
 
+    <style>
+        :root {
+            --primary-color: #0d47a1;
+            --secondary-color: #1565c0;
+        }
+
+        .navbar {
+            background-color: transparent;
+            position: absolute;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-brand img {
+            height: 80px;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(52, 152, 255, 0.1),
+            rgba(251, 111, 187, 0.1)),
+                        url('https://i.pinimg.com/736x/3c/81/fc/3c81fcef9e8a998f5998abb7521e3633.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 600px;
+            color: white;
+            padding-top: 150px;
+        }
+
+        .feature-card {
+            background: white;
+            color: var(--secondary-color);;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: -50px;
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+        }
+
+        .car-parts-section {
+            padding: 80px 0;
+        }
+
+        .part-item {
+            text-align: center;
+            padding: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .part-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .part-item img {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 15px;
+        }
+
+        .about-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .why-choose-section {
+            padding: 80px 0;
+        }
+
+        .why-choose-card {
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            background: white;
+            transition: transform 0.3s ease;
+        }
+
+        .why-choose-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .partners-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .partner-logo {
+            height: 80px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .partner-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        .appointment-section {
+            background: linear-gradient(rgba(13, 71, 161, 0.9), rgba(21, 101, 192, 0.9)),
+                        url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            color: white;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 12px 30px;
+        }
+
+        .btn-outline-light {
+            border: 2px solid white;
+            padding: 12px 30px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+    </style>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbar" class="text-light">
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0,0,0,0.9);">
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Create Plus Solutions</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">.
+            <a class="navbar-brand" href="#">
+                <img src="image/logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
+                Create Plus Solutions 
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#why-choose">Por que Escolher-nos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#why-choose">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contato</a>
+                    </li>
                 </ul>
+                <div class="ms-3">
+                    <a href="tel:+551199999999" class="text-white text-decoration-none">
+                        <i class="fas fa-phone me-2"></i>+258 841 222 333
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="hero-section text-white text-center">
-        <div class="container hero-content">
-            <h1 class="display-4 fw-bold mb-4">Create Plus Solutions</h1>
-            <p class="lead mb-5">Transformando Segurança com Tecnologia de Ponta</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="#services" class="btn btn-primary btn-lg">Nossos Serviços</a>
-                <a href="#" class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal">Fale Conosco</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="py-5 bg-dark">
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
         <div class="container">
-            <h2 class="text-center mb-5 text-light">Nossos Serviços Especializados</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card service-card h-100 text-center p-4">
-                        <div class="service-icon">
-                            <img src="https://cdn4.iconfinder.com/data/icons/VISTA/computer_gadgets/png/64/web_camera.png" class="" alt="Projeto 1">
-                        </div>
-                        <h4 class="text-light">Montagem de Câmeras</h4>
-                        <p>Instalação de sistemas de câmeras analógicas e IP para segurança máxima.</p>
-                        <a href="#" class="btn btn-outline-primary mt-3">Detalhes</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card service-card h-100 text-center p-4">
-                        <div class="service-icon"><i class="fas fa-bolt"></i></div>
-                        <h4 class="text-light">Cercas Elétricas Inteligentes</h4>
-                        <p>Perímetro de segurança com sensores integrados e notificações em tempo real.</p>
-                        <a href="#" class="btn btn-outline-primary mt-3">Detalhes</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card service-card h-100 text-center p-4">
-                        <div class="service-icon">
-                            <img src="https://cdn1.iconfinder.com/data/icons/internet-of-things-5/509/Security_camera-64.png" class="" alt="Projeto 1">
-
-                        </div>
-                        <h4 class="text-light">Sistemas de Alarme</h4>
-                        <p>Proteção total com integração de múltiplos sensores e central de monitoramento.</p>
-                        <a href="#" class="btn btn-outline-primary mt-3">Detalhes</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="py-5 parallax-bg text-light" style="background-image: url('/api/placeholder/1200/800');">
-        <div class="container overlay-dark text-white p-5 rounded">
-            <h2 class="text-center mb-5">Nossos Projetos</h2>
             <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card bg-transparent border-light">
-                        <img src="https://i.pinimg.com/736x/19/a9/da/19a9dab10b696c63177ae18d82a365b4.jpg" class="card-img-top" alt="Projeto 1">
-                        <div class="card-body text-light">
-                            <h5 class="card-title">Condomínio Residencial</h5>
-                            <p class="card-text">Sistema completo de segurança para condomínio de alto padrão.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card bg-transparent border-light">
-                        <img src="https://i.pinimg.com/736x/22/4a/b7/224ab71b53b3eae66e411c811c09cd54.jpg" class="card-img-top" alt="Projeto 2">
-                        <div class="card-body text-light">
-                            <h5 class="card-title">Indústria Tecnológica</h5>
-                            <p class="card-text">Solução de segurança personalizada para ambiente industrial.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card bg-transparent border-light">
-                        <img src="https://i.pinimg.com/736x/cf/4c/37/cf4c379f53a59254583266fcfee20063.jpg" class="card-img-top" height="250" alt="Projeto 3">
-                        <div class="card-body text-light">
-                            <h5 class="card-title">Centro Comercial</h5>
-                            <p class="card-text">Integração de sistemas de segurança em grande escala.</p>
-                        </div>
+                <div class="col-lg-8">
+                    <h1 class="display-4 mb-4">CREATE PLUS SOLUTIONS</h1>
+                    <p class="lead mb-4">Transformando Segurança com Tecnologia de Ponta</p>
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">AGENDAR INSPEÇÃO</button>
+                        <button class="btn btn-outline-light">NOSSOS SERVIÇOS</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="why-choose" class="why-choose-section py-5">
-        <div class="container">
-            <h2 class="text-center mb-5 text-light">Por que Escolher a Create Plus Solutions</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card why-choose-card h-100 p-4 text-center text-light">
-                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
-                        <h4 class="text-light">Tecnologia de Ponta</h4>
-                        <p>Utilizamos as mais avançadas tecnologias de segurança eletrônica.</p>
-                    </div>
+    <!-- Features -->
+    <section class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <img src="https://cdn0.iconfinder.com/data/icons/eon-basketball-i-1/32/time_clock_deadline_watch-64.png" alt="Relógio" class="feature-icon">
+                    <h4>24 HORAS</h4>
+                    <p>Atendimento 24 horas a sua conveniência</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card why-choose-card h-100 p-4 text-center text-light">
-                        <i class="fas fa-user-shield fa-3x text-primary mb-3"></i>
-                        <h4 class="text-light">Equipe Especializada</h4>
-                        <p>Profissionais altamente treinados e certificados em segurança eletrônica.</p>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <img src="https://cdn4.iconfinder.com/data/icons/lined-performance/48/a-09-64.png" alt="Qualidade" class="feature-icon">
+                    <h4>AGILIDADE</h4>
+                    <p>Serviço rápido e de qualidade garantida</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card why-choose-card h-100 p-4 text-center text-light">
-                        <i class="fas fa-headset fa-3x text-primary mb-3" ></i>
-                        <h4 class="text-light">Suporte Dedicado</h4>
-                        <p>Atendimento personalizado e suporte técnico 24/7.</p>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Setting-64.png" alt="Garantia" class="feature-icon">
+                    <h4>MANUTENCÃO</h4>
+                    <p>Equipe de profissionais especializados</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about-us" class="about-section py-5">
+    <!-- About Us Section -->
+   
+
+    <!-- Car Parts Section -->
+    <section class="car-parts-section" id="services">
         <div class="container">
-            <h2 class="text-center mb-5 text-light">Sobre Nós</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h3 class="text-primary mb-4">Nossa História</h3>
-                    <p>Fundada em 2015, a Create Plus Solutions nasceu da visão de oferecer soluções de segurança eletrônica de ponta. Nosso objetivo é transformar a maneira como empresas e residências protegem seus ativos, combinando tecnologia de ponta com expertise técnica.</p>
-                </div>
-                <div class="col-md-6">
-                    <h3 class="text-primary mb-4">Nossa Missão</h3>
-                    <p>Prover soluções de segurança inovadoras, personalizadas e eficientes, utilizando as mais avançadas tecnologias para garantir a tranquilidade e proteção de nossos clientes.</p>
-                </div>
-            </div>
-
-            <div class="row mt-5">
-                <div class="col-md-4 team-member text-center text-light">
-                    <img src="https://i.pinimg.com/236x/5a/11/0e/5a110e0b72a54423ee435b491597eb91.jpg" class="rounded-circle mb-3" height="150" alt="Membro da Equipe">
-                    <h4 class="text-light">João Silva</h4>
-                    <p class="">Fundador & CEO</p>
-                </div>
-                <div class="col-md-4 team-member text-center text-light">
-                    <img src="https://i.pinimg.com/736x/e5/55/db/e555db9f3c33473439bb6f3aa070af3a.jpg" class="rounded-circle mb-3" height="150" alt="Membro da Equipe">
-                    <h4 class="text-light">Maria Santos</h4>
-                    <p class="">Diretora de Tecnologia</p>
-                </div>
-                <div class="col-md-4 team-member text-center text-light">
-                    <img src="https://i.pinimg.com/236x/0f/05/15/0f05150777d3ace24e8fd1f59485ed75.jpg" class="rounded-circle mb-3" height="150" alt="Membro da Equipe">
-                    <h4 class="text-light">Pedro Oliveira</h4>
-                    <p class="">Diretor de Operações</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <!-- Footer with Clients and Collaborators -->
-    <footer id="contact" class="footer-contact py-5">
-        <div class="container">
-            <!-- Previous contact section remains the same -->
-
-            <!-- Clients and Collaborators Section -->
-            <div class="row mt-5 text-center">
-                <div class="col-12">
-                    <h3 class="text-light mb-4">Nossos Clientes e Parceiros</h3>
-                </div>
-                <div class="col-12">
-                    <div class="d-flex justify-content-center align-items-center flex-wrap">
-                        <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-64.png" alt="Cliente 1" class="mx-3 my-2 client-logo">
-                        <img src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/cocacola-64.png" alt="Cliente 2" class="mx-3 my-2 client-logo">
-                        <img src="https://cdn0.iconfinder.com/data/icons/car-brands/550/BMW_logo-64.png" alt="Cliente 3" class="mx-3 my-2 client-logo">
-                        <img src="https://cdn0.iconfinder.com/data/icons/car-brands/550/Toyota_logo-64.png" alt="Cliente 4" class="mx-3 my-2 client-logo">
-                        <img src="https://cdn1.iconfinder.com/data/icons/logos-brands-in-colors/323/Google_Crowdsource_logo-64.png" alt="Cliente 5" class="mx-3 my-2 client-logo">
-                    </div>
-                </div>
-            </div>
-
-    <footer id="contact" class="footer-contact py-5">
-       
-                <div class="col-12">
-                    <div class="card bg-dark border-0 text-light">
-                        <div class="card-body p-4 text-center">
-                            <h3 class="mb-4 text-light">Informações de Contato</h3>
-                            <p><i class="fas fa-map-marker-alt me-2 text-primary"></i> Rua das acacias, 123 - Maputo, Mocambique</p>
-                            <p><i class="fas fa-phone me-2 text-primary"></i> +258 841 222 333</p>
-                            <p><i class="fas fa-envelope me-2 text-primary"></i> contato@createplussolutions.com</p>
-                            <div class="social-icons mt-4">
-                                <a href="#" class="text-light mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
-                                <a href="#" class="text-light mx-2"><i class="fab fa-instagram fa-2x"></i></a>
-                                <a href="#" class="text-light mx-2"><i class="fab fa-facebook fa-2x"></i></a>
+            <h2 class="text-center mb-5">O QUE PRECISA DE REPARO?</h2>
+            <div id="partsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col">
+                                <div class="part-item">
+                                    <img src="https://i.pinimg.com/236x/05/3a/5e/053a5e4304b8205717fcf4f8ad3b6d57.jpg" height="64" alt="Vidros">
+                                    <h5>MONTAGEM DE CâMERAS</h5>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="part-item">
+                                    <img src="https://i.pinimg.com/736x/73/72/8a/73728a01127decf8eefabb74fd2d713b.jpg" height="64" alt="Câmbio">
+                                    <h5>CERCAS ELÉTRICAS</h5>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="part-item">
+                                    <img src="https://i.pinimg.com/736x/69/da/2e/69da2e51a7b03cf895b627ef08447292.jpg" height="64" alt="Motor">
+                                    <h5>ALARMES DE INTRUSÃO</h5>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="part-item">
+                                    <img src="https://i.pinimg.com/736x/dc/6d/b2/dc6db216f1d658250ad54b33848f994f.jpg" alt="Suspensão">
+                                    <h5>SENSORES DE MOVIMENTO</h5>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="part-item">
+                                    <img src="https://i.pinimg.com/236x/2c/0d/3f/2c0d3fc158aef1e28db9b65d0bccc92f.jpg" height="64" alt="Elétrica">
+                                    <h5>INTERCOMUNICADORES</h5>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#partsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#partsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </div>
-        <div class="text-center mt-4 ">
-            <p>&copy; 2024 Create Plus Solutions, LDA. Todos os direitos reservados.</p>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section" id="why-choose">
+        <div class="container">
+            <h2 class="text-center mb-5">POR QUE ESCOLHER NOSSOS SERVIÇOS</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="why-choose-card">
+                        <i class="fas fa-tools fa-2x text-primary mb-3"></i>
+                        <h4>Tecnologia Avançada</h4>
+                        <p>Utilizamos equipamentos de última geração para diagnóstico e reparo preciso.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="why-choose-card">
+                        <i class="fas fa-user-tie fa-2x text-primary mb-3"></i>
+                        <h4>Profissionais Experientes</h4>
+                        <p>Nossa equipe é formada por mecânicos certificados e especializados.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="why-choose-card">
+                        <i class="fas fa-clock fa-2x text-primary mb-3"></i>
+                        <h4>Agilidade no Serviço</h4>
+                        <p>Comprometimento com prazos e eficiência no atendimento.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section">
+        <div class="container">
+            <h2 class="text-center mb-5">NOSSOS CLIENTES E PARCEIROS</h2>
+            <div class="row align-items-center">
+                <div class="col-md-2 col-6 mb-4">
+                    <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-64.png" alt="Parceiro 1" class="partner-logo w-100">
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <img src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/cocacola-64.png" alt="Parceiro 2" class="partner-logo w-100">
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <img src="https://cdn0.iconfinder.com/data/icons/car-brands/550/BMW_logo-64.png" alt="Parceiro 3" class="partner-logo w-100">
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <img src="https://cdn0.iconfinder.com/data/icons/car-brands/550/Toyota_logo-64.png" alt="Parceiro 4" class="partner-logo w-100">
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <img src="https://cdn1.iconfinder.com/data/icons/logos-brands-in-colors/323/Google_Crowdsource_logo-64.png" alt="Parceiro 5" class="partner-logo w-100">
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/google_play-64.png" alt="Parceiro 6" class="partner-logo w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div class="modal fade" id="contactModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header border-0">
-                    <h5 class="modal-title text-light">Fale Conosco</h5>
+                    <h5 class="modal-title text-dark">Fale Conosco</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal">.</button>
                 </div>
                 <div class="form-container">
@@ -251,10 +363,146 @@
         </div>
     </div>
 
+    <!-- Appointment Section -->
+  
+
+    <!-- Add this CSS to the existing style section -->
+<style>
+    .footer {
+        background: linear-gradient(rgba(13, 71, 161, 0.9), rgba(21, 101, 192, 0.9));
+        color: white;
+        padding: 60px 0 30px;
+    }
+
+    .footer-logo {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 15px;
+        margin: 20px 0;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .social-icon:hover {
+        transform: translateY(-3px);
+        color: white;
+    }
+
+    .social-icon.facebook:hover {
+        background-color: #1877f2;
+    }
+
+    .social-icon.instagram:hover {
+        background: #d6249f;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    }
+
+    .social-icon.whatsapp:hover {
+        background-color: #25d366;
+    }
+
+    .social-icon.youtube:hover {
+        background-color: #ff0000;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: var(--primary-color);
+    }
+
+    .footer-contact {
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #333;
+        margin-top: 40px;
+        padding-top: 20px;
+        text-align: center;
+        color: #666;
+    }
+</style>
+
+<!-- Add this footer section before the closing body tag -->
+<footer class="footer" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <img src="image/logo.png" alt="Logo" class="footer-logo">
+                <p>Oferecemos serviços automotivos de qualidade com garantia e preços justos. Sua satisfação é nossa prioridade.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <h5 class="mb-4">LINKS RÁPIDOS</h5>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Início</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Sobre Nós</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Nossos Serviços</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Agendamento</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Contato</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <h5 class="mb-4">CONTATO</h5>
+                <div class="footer-contact">
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Rua das acacias, 123 - Maputo, Mocambique</p>
+                    <p><i class="fas fa-phone me-2"></i>+258 841 222 333</p>
+                    <p><i class="fas fa-envelope me-2"></i>contato@automecanica.com</p>
+                    <p><i class="fas fa-clock me-2"></i>Segunda a Sábado: 8h às 18h</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Auto Mecânica. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/index.js"></script>
-    
 </body>
 </html>

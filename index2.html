@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Plus Solutions - Soluções Tecnológicas Avançadas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
+
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" class="text-dark">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0,0,0,0.9);">
+        <div class="container">
+            <a class="navbar-brand" href="#">Create Plus Solutions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">.
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why-choose">Por que Escolher-nos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section text-white text-center">
+        <div class="container hero-content">
+            <h1 class="display-4 fw-bold mb-4">Create Plus Solutions</h1>
+            <p class="lead mb-5">Transformando Segurança com Tecnologia de Ponta</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#services" class="btn btn-primary btn-lg">Nossos Serviços</a>
+                <a href="#" class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal">Fale Conosco</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-5 bg-transparent">
+        <div class="container">
+            <h2 class="text-center mb-5 text-dark">Nossos Serviços Especializados</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card service-card h-100 text-center p-4">
+                        <div class="service-icon">
+                            <img src="https://cdn4.iconfinder.com/data/icons/VISTA/computer_gadgets/png/64/web_camera.png" class="" alt="Projeto 1">
+                        </div>
+                        <h4 class="text-dark">Montagem de Câmeras</h4>
+                        <p>Instalação de sistemas de câmeras analógicas e IP para segurança máxima.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Detalhes</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card h-100 text-center p-4">
+                        <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                        <h4 class="text-dark">Cercas Elétricas Inteligentes</h4>
+                        <p>Perímetro de segurança com sensores integrados e notificações em tempo real.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Detalhes</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card h-100 text-center p-4">
+                        <div class="service-icon">
+                            <img src="https://cdn1.iconfinder.com/data/icons/internet-of-things-5/509/Security_camera-64.png" class="" alt="Projeto 1">
+
+                        </div>
+                        <h4 class="text-dark">Sistemas de Alarme</h4>
+                        <p>Proteção total com integração de múltiplos sensores e central de monitoramento.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-5 parallax-bg text-dark" style="background-image: url('/api/placeholder/1200/800');">
+        <div class="container overlay-dark text-white p-5 rounded">
+            <h2 class="text-center mb-5">Nossos Projetos</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-transparent border-light">
+                        <img src="https://i.pinimg.com/736x/19/a9/da/19a9dab10b696c63177ae18d82a365b4.jpg" class="card-img-top" alt="Projeto 1">
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">Condomínio Residencial</h5>
+                            <p class="card-text">Sistema completo de segurança para condomínio de alto padrão.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-transparent border-light">
+                        <img src="https://i.pinimg.com/736x/22/4a/b7/224ab71b53b3eae66e411c811c09cd54.jpg" class="card-img-top" alt="Projeto 2">
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">Indústria Tecnológica</h5>
+                            <p class="card-text">Solução de segurança personalizada para ambiente industrial.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-transparent border-light">
+                        <img src="https://i.pinimg.com/736x/cf/4c/37/cf4c379f53a59254583266fcfee20063.jpg" class="card-img-top" height="250" alt="Projeto 3">
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">Centro Comercial</h5>
+                            <p class="card-text">Integração de sistemas de segurança em grande escala.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose" class="why-choose-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 text-dark">Por que Escolher a Create Plus Solutions</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card why-choose-card h-100 p-4 text-center text-dark">
+                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                        <h4 class="text-dark">Tecnologia de Ponta</h4>
+                        <p>Utilizamos as mais avançadas tecnologias de segurança eletrônica.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card why-choose-card h-100 p-4 text-center text-dark">
+                        <i class="fas fa-user-shield fa-3x text-primary mb-3"></i>
+                        <h4 class="text-dark">Equipe Especializada</h4>
+                        <p>Profissionais altamente treinados e certificados em segurança eletrônica.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card why-choose-card h-100 p-4 text-center text-dark">
+                        <i class="fas fa-headset fa-3x text-primary mb-3" ></i>
+                        <h4 class="text-dark">Suporte Dedicado</h4>
+                        <p>Atendimento personalizado e suporte técnico 24/7.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-us" class="about-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 text-dark">Sobre Nós</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-primary mb-4">Nossa História</h3>
+                    <p>Fundada em 2015, a Create Plus Solutions nasceu da visão de oferecer soluções de segurança eletrônica de ponta. Nosso objetivo é transformar a maneira como empresas e residências protegem seus ativos, combinando tecnologia de ponta com expertise técnica.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-primary mb-4">Nossa Missão</h3>
+                    <p>Prover soluções de segurança inovadoras, personalizadas e eficientes, utilizando as mais avançadas tecnologias para garantir a tranquilidade e proteção de nossos clientes.</p>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-4 team-member text-center text-dark">
+                    <img src="https://i.pinimg.com/236x/5a/11/0e/5a110e0b72a54423ee435b491597eb91.jpg" class="rounded-circle mb-3" height="150" alt="Membro da Equipe">
+                    <h4 class="text-dark">João Silva</h4>
+                    <p class="">Fundador & CEO</p>
+                </div>
+                <div class="col-md-4 team-member text-center text-dark">
+                    <img src="https://i.pinimg.com/736x/e5/55/db/e555db9f3c33473439bb6f3aa070af3a.jpg" class="rounded-circle mb-3" height="150" alt="Membro da Equipe">
+                    <h4 class="text-dark">Maria Santos</h4>
+                    <p class="">Diretora de Tecnologia</p>
+                </div>
+                <div class="col-md-4 team-member text-center text-dark">
+                    <img src="https://i.pinimg.com/236x/0f/05/15/0f05150777d3ace24e8fd1f59485ed75.jpg" class="rounded-circle mb-3" height="150" alt="Membro da Equipe">
+                    <h4 class="text-dark">Pedro Oliveira</h4>
+                    <p class="">Diretor de Operações</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Footer with Clients and Collaborators -->
+    <footer id="contact" class="footer-contact py-5">
+        <div class="container">
+            <!-- Previous contact section remains the same -->
+
+            <!-- Clients and Collaborators Section -->
+            <div class="row mt-5 text-center">
+                <div class="col-12">
+                    <h3 class="text-dark mb-4">Nossos Clientes e Parceiros</h3>
+                </div>
+                <div class="col-12">
+                    <div class="d-flex justify-content-center align-items-center flex-wrap">
+                        <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-64.png" alt="Cliente 1" class="mx-3 my-2 client-logo">
+                        <img src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/cocacola-64.png" alt="Cliente 2" class="mx-3 my-2 client-logo">
+                        <img src="https://cdn0.iconfinder.com/data/icons/car-brands/550/BMW_logo-64.png" alt="Cliente 3" class="mx-3 my-2 client-logo">
+                        <img src="https://cdn0.iconfinder.com/data/icons/car-brands/550/Toyota_logo-64.png" alt="Cliente 4" class="mx-3 my-2 client-logo">
+                        <img src="https://cdn1.iconfinder.com/data/icons/logos-brands-in-colors/323/Google_Crowdsource_logo-64.png" alt="Cliente 5" class="mx-3 my-2 client-logo">
+                    </div>
+                </div>
+            </div>
+
+    <footer id="contact" class="footer-contact py-5">
+       
+                <div class="col-12">
+                    <div class="card bg-dark border-0 text-dark">
+                        <div class="card-body p-4 text-center">
+                            <h3 class="mb-4 text-dark">Informações de Contato</h3>
+                            <p><i class="fas fa-map-marker-alt me-2 text-primary"></i> Rua das acacias, 123 - Maputo, Mocambique</p>
+                            <p><i class="fas fa-phone me-2 text-primary"></i> +258 841 222 333</p>
+                            <p><i class="fas fa-envelope me-2 text-primary"></i> contato@createplussolutions.com</p>
+                            <div class="social-icons mt-4">
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-instagram fa-2x"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-facebook fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4 ">
+            <p>&copy; 2024 Create Plus Solutions, LDA. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <div class="modal fade" id="contactModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-dark">Fale Conosco</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal">.</button>
+                </div>
+                <div class="form-container">
+                    <form id="modalContactForm" class="from">
+                        <div class="form-group mb-2">
+                            <label for="email">Company Email</label>
+                            <input type="text" id="email" name="email" required="">
+                          </div>
+                          <div class="form-group mb-2">
+                            <label for="textarea">How Can We Help You?</label>
+                            <textarea name="textarea" id="textarea" rows="10" cols="50" required="">          </textarea>
+                          </div>
+                          <div class="form-group">
+                            <label for="service">Selecione o Tipo de Serviço</label>
+                            <select  name="service" id="service" required>
+                                <option>Videovigilância</option>
+                                <option>Cercas Elétricas</option>
+                                <option>Sistemas de Alarme</option>
+                                <option>Outro</option>
+                            </select>
+                        </div>
+                        <button class="form-submit-btn" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/index.js"></script>
+    
+</body>
+</html>
